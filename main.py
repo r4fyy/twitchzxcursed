@@ -24,15 +24,7 @@ def main():
 
 # Read streamer logins from command-line arguments, if possible. Otherwise, prompt user input.
 def read_streamer_logins():
-    user_input = []
-    if len(sys.argv) <= 1:  # no command-line args (the first is always source file name)
-        print("Enter the streamer name (or several separated by commas). More important streamers go first.")
-        twitch_streamers = input("Streamer names: ")
-        user_input = twitch_streamers.split(",")
-    else:
-        for i in range(1, len(sys.argv)):
-            user_input += sys.argv[i].split(",")
-
+    user_input = ["ez4qcan", "sovaf", "everon__", "hokageee77", "yakcsgo", "hardosx", "4pokkkkkkk", "smetan_in", "blackwzor", "lufacs"]
     streamer_logins = []
     for streamer_login in user_input:
         streamer_login = streamer_login.strip()
@@ -54,3 +46,4 @@ def start_watching():
 
 if __name__ == "__main__":
     main()
+
